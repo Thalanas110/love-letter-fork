@@ -603,6 +603,7 @@ body{
   .burst, .trail, .rainheart, .confetti-heart{ display:none; }
   .brand{ transition:none; }
   .brand:hover, .brand:focus-visible{ transform:none; }
+  .brand__text{ transition:none; }
 }
 
 /* ============================================================
@@ -610,18 +611,61 @@ body{
    ============================================================ */
 .brand{
   position:fixed; right:18px; bottom:16px; z-index:50;
-  display:block; width:48px; height:48px;
-  border-radius:50%; overflow:hidden;
-  opacity:.5;
-  box-shadow:0 4px 14px rgba(0,0,0,.28), 0 0 16px rgba(70,205,255,.28);
-  transition:opacity .35s ease, transform .35s ease;
+  display:flex; align-items:center; justify-content:flex-start; gap:12px;
+  width:48px; height:48px;
+  padding:0;
+  border:3px solid rgba(122,34,48,.18);
+  border-radius:999px; overflow:hidden;
+  background:rgba(253,244,239,.88);
+  opacity:.62;
+  box-shadow:0 4px 14px rgba(0,0,0,.28), 0 0 16px rgba(70,205,255,.18);
+  text-decoration:none;
+  transition:width .35s var(--ease), padding .35s var(--ease), opacity .35s ease,
+             transform .35s var(--ease), box-shadow .35s ease, border-color .35s ease,
+             background-color .35s ease;
   -webkit-tap-highlight-color:transparent;
+}
+.brand__icon{
+  flex:0 0 48px;
+  width:48px; height:48px;
+  border-radius:50%;
+  overflow:hidden;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.35);
 }
 .brand img{
   display:block; width:100%; height:100%;
   object-fit:cover; transform:scale(1.08);
 }
-.brand:hover, .brand:focus-visible{ opacity:1; transform:scale(1.07); outline:none; }
+.brand__text{
+  min-width:max-content;
+  padding-right:16px;
+  font-family:var(--font-pix);
+  font-size:.58rem;
+  line-height:1.2;
+  letter-spacing:.08em;
+  color:var(--maroon);
+  text-transform:uppercase;
+  white-space:nowrap;
+  opacity:0;
+  transform:translateX(-10px);
+  transition:opacity .22s ease, transform .32s var(--ease);
+}
+.brand:hover, .brand:focus-visible{
+  width:226px;
+  padding-right:2px;
+  opacity:1;
+  transform:translateY(-2px) scale(1.03);
+  border-color:rgba(122,34,48,.38);
+  background:rgba(253,244,239,.98);
+  box-shadow:0 10px 24px rgba(122,34,48,.24), 0 0 0 3px rgba(255,255,255,.32);
+  outline:none;
+}
+.brand:hover .brand__text, .brand:focus-visible .brand__text{
+  opacity:1;
+  transform:translateX(0);
+}
 @media (max-width:480px){
-  .brand{ width:40px; height:40px; right:12px; bottom:12px; }
+  .brand{ right:12px; bottom:12px; }
+  .brand:hover, .brand:focus-visible{ width:198px; }
+  .brand__text{ font-size:.5rem; padding-right:14px; }
 }
