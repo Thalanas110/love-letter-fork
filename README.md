@@ -1,3 +1,5 @@
+### ORIGINAL FROM https://github.com/hasib41/love-letter.git, Modified for my personal use. Credits to the original!
+
 # Love Letter 💌
 
 A tiny, cute, interactive **pixel-art love letter** that runs in your browser.
