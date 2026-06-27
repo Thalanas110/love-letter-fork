@@ -1,4 +1,5 @@
-### ORIGINAL FROM https://github.com/hasib41/love-letter.git, Modified for my personal use. Credits to the original!
+# ORIGINAL FROM https://github.com/hasib41/love-letter.git, Modified for my personal use. Credits to the original!
+---
 
 # Love Letter 💌
 

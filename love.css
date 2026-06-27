@@ -4,17 +4,17 @@
    ============================================================ */
 
 :root{
-  --cream:      #f7efe3;   /* page background          */
-  --coral:      #d97b73;   /* window frame / borders   */
-  --coral-dk:   #b9554d;   /* darker frame line        */
-  --pink:       #f0b6c6;   /* title bar                */
-  --pink-lt:    #f7d8e0;   /* heart-row bar            */
-  --gingham:    #f3c6d2;   /* content base             */
-  --gingham-2:  rgba(206,118,142,.28);
+  --cream:      #fbf1d8;   /* page background          */
+  --coral:      #e08b67;   /* window frame / borders   */
+  --coral-dk:   #c96b4a;   /* darker frame line        */
+  --pink:       #f4c59c;   /* title bar                */
+  --pink-lt:    #f8dfbf;   /* heart-row bar            */
+  --gingham:    #f6d2b7;   /* content base             */
+  --gingham-2:  rgba(223,145,112,.26);
   --maroon:     #7a2230;   /* dark pixel text          */
-  --red:        #e23b4e;   /* hearts                   */
-  --red-dk:     #b22a3b;
-  --paper:      #fdf4ef;   /* buttons / envelope body  */
+  --red:        #eb5c4d;   /* hearts                   */
+  --red-dk:     #c84438;
+  --paper:      #fff4df;   /* buttons / envelope body  */
   --sel:        #2f54d6;   /* "selection" highlight    */
 
   --heart-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21.6 4.1 13.7a5.1 5.1 0 0 1 7.2-7.2l.7.7.7-.7a5.1 5.1 0 1 1 7.2 7.2z'/%3E%3C/svg%3E");
@@ -537,6 +537,18 @@ body{
   opacity:0;
   transform:translateY(8px);
   transition:opacity .5s ease .15s, transform .5s var(--ease) .15s;
+}
+
+.final2 {
+  font-size:1.03rem;
+  line-height:1.4;
+  text-align:center;
+  color:var(--maroon);
+  max-width:30ch;
+  opacity:0;
+  transform:translateY(8px);
+  transition:opacity .5s ease .15s, transform .5s var(--ease) .15s;
+
 }
 .final.is-show{ opacity:1; transform:none; }
 .final strong{ font-weight:700; }

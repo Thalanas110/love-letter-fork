@@ -21,6 +21,7 @@ const buttons       = $('buttons');
 const yesBtn        = $('yesBtn');
 const noBtn         = $('noBtn');
 const finalText     = $('final');
+const finalText2    = $('final2');
 const closeBtn      = $('closeBtn');
 const confettiBox   = $('confetti');
 const rainBox       = $('rain');
@@ -491,8 +492,12 @@ function sayYes(){
 
   buttons.hidden = true;
   finalText.hidden = false;
+  finalText2.hidden = false;
   // next frame so the transition runs
-  requestAnimationFrame(() => finalText.classList.add('is-show'));
+  requestAnimationFrame(() => {
+    finalText.classList.add('is-show');
+    finalText2.classList.add('is-show');
+  });
 
   // floating heart above the cat
   const fh = document.createElement('span');
@@ -638,7 +643,9 @@ function reset(){
   catCanvas.setAttribute('aria-label', 'A little cat holding a heart');
   buttons.hidden = false;
   finalText.hidden = true;
+  finalText2.hidden = true;
   finalText.classList.remove('is-show');
+  finalText2.classList.remove('is-show');
   content.classList.remove('is-won');
   win.classList.remove('is-celebrate');
   content.querySelectorAll('.cat-heart, .burst').forEach((el) => el.remove());
